@@ -1,8 +1,10 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template, jsonify
 import os
 import socket
 
-from server import get_random_image_set
+from routes import route
+
+from domain import get_random_image_set
 
 # Set the directory path name as a local variable
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -20,5 +22,11 @@ def main():
     second_image = _get_static_url(second_image)
     return render_template('main.html', first_image=first_image, second_image=second_image)
 
+@app.route("/api/v1/<endpoint>", methods=['GET'])
+def api(endpoint):
+    response = jsonify(route(endpoint))
+    return response
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
+

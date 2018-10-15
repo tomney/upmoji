@@ -24,8 +24,9 @@ Note the period to indicate the directory. The `upmoji` part is the tag for this
 
 Check to see that the image can be run locally via"
 ```
-docker run --rm -p 8080:8080 gcr.io/${PROJECT_ID}/upmoji:gke
+docker run --rm -p 8080:80 gcr.io/${PROJECT_ID}/upmoji:gke
 ```
+If it is ever necessary to edit the port allocations it is helpful to note that `-p` is used to specify port allocations where the first port is the port you will access locally and the second port is the exposed port on the docker container.
 
 Once the docker image is built you should be able to see it in your list of local docker images by running:
 ```
