@@ -1,8 +1,9 @@
 from api.get_image_set import GetImageSetHandler
 
 routes = {
-    'get_image_set': GetImageSetHandler()
+    'get_image_set': GetImageSetHandler
 }
 
 def route(endpoint):
-    return routes[endpoint]
+    handler = routes[endpoint]
+    return handler()._process()

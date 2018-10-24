@@ -24,9 +24,8 @@ def main():
 
 @app.route("/api/v1/<endpoint>", methods=['GET'])
 def api(endpoint):
-    response = jsonify(route(endpoint))
-    return response
+    response = route(endpoint)
+    return jsonify(response)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
-
