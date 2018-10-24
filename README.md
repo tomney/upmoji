@@ -1,7 +1,7 @@
 ### Deployment
  Get GCloud to point to your project. If you have access to the upmoji project, this can be done by running
  ```
- gcloud config set project upmoji
+ gcloud config set project ace-shine-212419
  ```
 
  You can also specify the zone via:

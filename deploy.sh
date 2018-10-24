@@ -1,5 +1,5 @@
 # Configure gcloud
-gcloud config set project upmoji
+gcloud config set project ace-shine-212419
 gcloud config set compute/zone us-central1-a
 
 # Set environment variables
