@@ -14,7 +14,8 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 EXPOSE 80
 
 # Define environment variable
-ENV PORT 8080
+ENV PORT=8080 \
+    GOOGLE_APPLICATION_CREDENTIALS="./owner-key.json"
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
