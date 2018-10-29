@@ -22,6 +22,10 @@ def main():
     second_image = _get_static_url(second_image)
     return render_template('main.html', first_image=first_image, second_image=second_image)
 
+@app.route("/")
+def test():
+    return render_template('main.html', first_image="test.jpg", second_image="test.jpg")
+
 @app.route("/api/v1/<endpoint>", methods=['GET'])
 def api(endpoint):
     response = route(endpoint)

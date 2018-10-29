@@ -42,4 +42,4 @@ Ensure that you are logged in to your docker account, or the push request will f
 
 A deployment can be created from the image through the container registry in Google Cloud Platform.
 
-If you experience a lot of trouble it is likely that your firewall setting are not configured properly. You can edit firewall rules in the VPC Networks option in GCP.
+If you experience a lot of trouble it is likely that your firewall setting are not configured properly. You can edit firewall rules in the VPC Networks option in GCP. Also, note that the default GCE web addresses are not HTTPS.
